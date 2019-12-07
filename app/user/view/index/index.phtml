@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>用户名</th>
+                <th>密码</th>
+                <th>手机</th>
+                <th>地址</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <?php
+            foreach ($list as $i=>$row) {
+        ?>
+        <tr>
+            <th>{$i+1}</th>
+            <td>{$row.username}</td>
+            <td>{$row.password}</td>
+            <td>{$row.mobile}</td>
+            <td>{$row.address}</td>
+            <td>
+                <a href="{:url('edit')}?id={$row.username}" class="btn btn-sm btn-primary">修改</a>
+                <a href="{:url('delete')}?id={$row.username}" class="btn btn-sm btn-primary tmdDelete">删除</a>
+            </td>
+        </tr>
+        </tbody>
+        <?php
+            }
+        ?>
+    </table>
+</div>

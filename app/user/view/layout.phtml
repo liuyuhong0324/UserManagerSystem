@@ -1,0 +1,74 @@
+<?php
+if(!request()->isAjax()){
+    ?>
+    <!doctype html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+        <meta name="format-datection" content="telephone=no">
+        <title>用户管理</title>
+        <link rel="stylesheet" href="/static/zui/css/zui.min.css">
+
+        <script src="/static/jquery/jquery.js"></script>
+        <script src="/static/zui/js/zui.min.js"></script>
+    </head>
+    <body>
+    <div class="container-fluid">
+    <div class="row navbar-fixed-top">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!-- 移动设备上的导航切换按钮 -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-my">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="{:url('/user/index/index')}">用户管理</a>
+                </div>
+                <div class="collapse navbar-collapse navbar-collapse-my">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="{:url('/user/index/index')}">用户列表</a></li>
+                        <li><a href="{:url('/user/info/index')}">个人信息</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div style="margin-top: 58px"></div>
+
+    <div class="col-sm-10">
+
+    <div class="col-sm-10>"
+
+<?php } ?>
+    {__CONTENT__}
+<?php
+if(!request()->isAjax()){
+    ?>
+    </div><!-- end myMain -->
+    <?php
+    if (request()->isMobile()) {
+        // 手机端 才有的底部
+        ?>
+
+        <?php
+    }else{
+        // 非手机端 显示 版权信息
+    }?>
+
+    <div class="row">
+        <div class="myFoot">
+            © 2019 用户管理系统 <a href="https://liuyuhong.ml">liuyuhong.ml</a>
+        </div>
+    </div>
+
+    </div><!-- end container-fluid -->
+
+    </body>
+    </html>
+<?php } ?>

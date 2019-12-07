@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`(
+    `username` varchar(100) NOT NULL COMMENT '用户名',
+    `password` varchar(50) NOT NULL COMMENT '密码',
+    `pwdconfirm` varchar(50) NOT NULL COMMENT '确认密码',
+    `mobile` varchar(30) NOT NULL COMMENT '手机号码',
+    `address` varchar(100) COMMENT '地址'
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=UTF8 COMMENT '用户表';
