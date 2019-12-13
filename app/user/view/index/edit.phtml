@@ -1,0 +1,19 @@
+<div class="container-fluid">
+        <?php
+        foreach ($list as $i=>$row) {
+        ?>
+            <div class="container-fluid">
+                <span class="label label-primary">用户名</span>
+                <input type="text" class="form-control" placeholder="{$row.username}">
+                <span class="label label-primary">密码</span>
+                <input type="text" class="form-control" placeholder="{$row.pwdconfirm}">
+                <span class="label label-primary">手机号</span>
+                <input type="text" class="form-control" placeholder="{$row.mobile}">
+                <span class="label label-primary">地址</span>
+                <input type="text" class="form-control" placeholder="{$row.address}">
+                <a href="{:url('edit')}?username={$row.username}" class="btn btn-sm btn-primary">保存</a>
+            </div>
+        <?php
+        }
+        ?>
+</div>

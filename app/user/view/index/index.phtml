@@ -21,8 +21,8 @@
             <td>{$row.mobile}</td>
             <td>{$row.address}</td>
             <td>
-                <a href="{:url('edit')}?id={$row.username}" class="btn btn-sm btn-primary">修改</a>
-                <a href="{:url('delete')}?id={$row.username}" class="btn btn-sm btn-primary tmdDelete">删除</a>
+                <a href="{:url('edit')}?username={$row.username}" class="btn btn-sm btn-primary">修改</a>
+                <a href="{:url('delete')}?username={$row.username}" class="btn btn-sm btn-primary tmdDelete">删除</a>
             </td>
         </tr>
         </tbody>
