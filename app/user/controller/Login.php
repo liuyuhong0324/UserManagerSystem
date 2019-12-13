@@ -108,7 +108,7 @@ class Login extends Controller
     }
 
     //登出方法
-    function loguot()
+    function logout()
     {
         session('user',null);
         $this->redirect('index');
